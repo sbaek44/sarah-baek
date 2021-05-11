@@ -1,0 +1,251 @@
+html {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  font-size: x-large;
+}
+
+#about, #projects, #skills, #contact {
+  margin: 130px 70px;
+}
+
+#name::before, #about::before, #projects::before, #skills::before, #contact::before, #footer::before {
+  display: block;
+  content: " ";
+  margin-top: -50px;
+  height: 50px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#title {
+  margin-bottom: 20px;
+  font-size: xxx-large;
+}
+
+@media screen and (max-width: 1230px) {
+  body #skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 5%;
+    margin-top: -40px;
+  }
+  #thumbnail {
+    width: 500px;
+  }
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  line-height: 55px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  margin: -6px;
+  font-size: large;
+  background-color: black;
+  z-index: 1;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+#navbar a:hover {
+  color:rgb(211, 136, 255);
+}
+
+/* Banner​ */
+#name {
+  font-family: 'Merienda', cursive;
+  font-size: 90px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+#engineer {
+  margin-top: 0px;
+  margin-bottom: 45px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#banner {
+  width: 100%;
+  border-radius: 0.2em;
+}
+
+/* About */
+#about-container, #skills-container {
+  background-color: #F8F4EE;
+  padding-bottom: 0.1px;
+  margin: -6px;
+}
+
+#narrative-container {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-areas: '. narrative .';
+}
+
+#narrative {
+  font-size: xx-large;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+#narrative-container #narrative {
+  grid-area: narrative;
+}
+
+/* Projects */
+#project-container {
+  margin: 5% 15%;
+}
+
+#project-title {
+  font-size: xx-large;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+#project-desc {
+  font-size: large;
+  margin-top: -20px;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.rec.rec-arrow.rec-arrow-right, .rec.rec-arrow.rec-arrow-left {
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  color: black;
+  font-size: 3.5em;
+}
+
+.rec.rec-arrow:hover:enabled, .rec.rec-arrow:focus:enabled {
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  color: black;
+  font-size: 3.5em;
+}
+
+.rec.rec-arrow.rec-arrow-right:hover, .rec.rec-arrow.rec-arrow-left:hover {
+  transform: none;
+  background: none;
+  color: rgb(211, 136, 255);
+  font-size: 3.5em;
+  box-shadow: none;
+}
+
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+button.rec-dot {
+  background-color: white;
+}
+
+.rec.rec-dot.rec-dot_active {
+  background-color: white;
+  box-shadow: 0 0 1px 3px rgb(211, 136, 255);
+}
+
+.rec.rec-dot:hover  {
+  box-shadow: 0 0 1px 3px rgb(211, 136, 255);
+}
+
+/* Skills */
+#skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-right: 5%;
+  margin-top: -40px;
+}
+
+#front-end-title, #back-end-title, #dev-tools-title, #deployment-title {
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+/* Contact */
+#contact {
+  margin-bottom: 15%;
+}
+
+#link-up {
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+#icons-container {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: '. git email linkedin .'
+}
+
+#icons-container #git {
+  grid-area: git;
+}
+
+#icons-container #email {
+  grid-area: email;
+}
+
+#icons-container #linkedin {
+  grid-area: linkedin;
+}
+
+.fa-github, .fa-envelope, .fa-linkedin {
+  cursor: pointer;
+}
+
+.fa-github:hover, .fa-envelope:hover, .fa-linkedin:hover {
+  color:rgb(211, 136, 255)
+}
+
+/* Footer */
+#footer {
+  font-size: large;
+  font-weight: 400;
+  line-height: 0.8;
+  color: white;
+  background-color: black;
+  padding-bottom: 30px;
+  margin: -8px;
+}
+
+#back-to-top {
+  width: 150px;
+  height: 35px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#back-to-top a {
+  text-decoration: none;
+  font-size: large;
+  color: black;
+}
+
+#back-to-top a:hover {
+  color: rgb(211, 136, 255);
+  font-weight: 600;
+}
